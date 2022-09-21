@@ -1,0 +1,16 @@
+name: Builder
+
+on: push
+
+env:
+  MVN_PUBLISH_SASCHA_USER: ${{secrets.MavenUser}}
+  MVN_PUBLISH_SASCHA_TOKEN: ${{secrets.MavenToken}}
+
+jobs:
+  build:
+    runs-on: linux
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+      - name: Execute Gradle build and publish natives
+        run: ./gradlew build publish
