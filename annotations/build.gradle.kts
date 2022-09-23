@@ -1,7 +1,7 @@
 plugins {
     kotlin("multiplatform")
 }
-version = "1.0.1"
+version = "1.0.2"
 
 kotlin {
     // shifty workaround to get this dependency working on ALL platforms xD
