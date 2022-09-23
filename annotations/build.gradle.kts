@@ -6,9 +6,6 @@ version = "1.0.1"
 kotlin {
     // shifty workaround to get this dependency working on ALL platforms xD
     jvm() {}
-    ios() {}
-    watchos() {}
-    tvos() {}
     mingwX64() {}
     mingwX86() {}
     linuxX64() {}
