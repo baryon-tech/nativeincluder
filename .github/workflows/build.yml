@@ -8,9 +8,9 @@ env:
 
 jobs:
   build:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
-      - name: Execute Gradle build and publish natives
-        run: ./gradlew build publish
+      - name: Execute Gradle build and publish
+        run: chmod +x gradlew && ./gradlew build publish
