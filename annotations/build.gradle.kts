@@ -1,14 +1,27 @@
 plugins {
-    kotlin("jvm")
+    kotlin("multiplatform")
 }
-version = "1.0.0"
+version = "1.0.1"
 
-publishing {
-    publications {
-        register("mavenJava", MavenPublication::class) {
-            from(components["kotlin"]);
+kotlin {
+    // shifty workaround to get this dependency working on ALL platforms xD
+    jvm() {}
+    ios() {}
+    watchos() {}
+    tvos() {}
+    mingwX64() {}
+    mingwX86() {}
+    linuxX64() {}
+    macosX64() {}
+    macosArm64() {}
+    sourceSets {
+        val commonMain by getting {
+
         }
     }
+}
+
+publishing {
     repositories {
         maven {
             url = uri("https://maven.sascha-t.de/public")
