@@ -13,6 +13,7 @@ subprojects {
     group = "io.github.baryontech.nativeincluder"
     repositories {
         mavenCentral()
+        google()
     }
     apply(plugin = "maven-publish")
 }
